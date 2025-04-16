@@ -3,6 +3,9 @@
 
 import streamlit as st
 from datetime import datetime
+import base64
+from pathlib import Path
+
 
 def run_dashboard(system):
     """Run the Streamlit dashboard."""
@@ -18,7 +21,7 @@ def run_dashboard(system):
     This dashboard monitors and controls an AI-powered HVAC system that optimizes
     energy usage based on occupancy and environmental conditions.
     """)
-    
+        
     # System control sidebar
     st.sidebar.title("System Control")
     if st.sidebar.button("Start System"):
